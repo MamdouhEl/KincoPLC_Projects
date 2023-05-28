@@ -1,0 +1,10 @@
+VAR_GLOBAL
+END_VAR
+VAR_GLOBAL
+    T30    :TON   ;  (*  *)
+    T31    :TON   ;  (*  *)
+    T32    :TON   ;  (*  *)
+    C1     :CTU   ;  (*  *)
+    C0     :CTU   ;  (*  *)
+    C3     :CTU   ;  (*  *)
+END_VAR

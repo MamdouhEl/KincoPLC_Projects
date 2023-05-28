@@ -1,0 +1,1032 @@
+(*2*)
+(* Network 0 *)
+LD    TRUE
+MBUSR    %SM0.3, 1, B#2, 3, 0, 12, %VW92, %MB53
+NE    %VW92, 0
+NE    %VB98, %VB202
+MOVE    %VB106, %VB200
+AND    B#2#00111111, %VB200
+MOVE    %VB98, %VB202
+MOVE    %VB100, %VB203
+MOVE    %VB102, %VB204
+MOVE    %VB104, %VB205
+MOVE    B#1, %VB800
+(* Network 1 *)
+(*MilkMeter*)
+LD    %I2.7
+TON   T77, 10
+__CR_EQ_1
+MOVE    T77, %VW262
+__CR_RESTORE
+S    %Q1.7
+(* Network 2 *)
+LD    %Q1.7
+TON   T78, 10
+__CR_EQ_1
+MOVE    T78, %VW264
+__CR_RESTORE
+ST   %M4.0
+(* Network 3 *)
+LD    %M4.0
+AND    %I2.1
+CTU   C20, %M0.2, 10000
+__CR_EQ_1
+MOVE    C20, %VW266
+__CR_RESTORE
+ST   %BR0.0
+(* Network 4 *)
+LD    %M4.0
+R    %Q1.7
+(* Network 5 *)
+LD    TRUE
+MOVE    C20, %VW314
+MUL    200, %VW314
+(* Network 6 *)
+(*MilkMeter*)
+LD    %I2.6
+TON   T75, 10
+__CR_EQ_1
+MOVE    T75, %VW256
+__CR_RESTORE
+S    %Q1.6
+(* Network 7 *)
+LD    %Q1.6
+TON   T76, 10
+__CR_EQ_1
+MOVE    T76, %VW258
+__CR_RESTORE
+ST   %M3.7
+(* Network 8 *)
+LD    %M3.7
+AND    %I2.1
+CTU   C19, %M0.2, 10000
+__CR_EQ_1
+MOVE    C19, %VW260
+__CR_RESTORE
+ST   %BR0.0
+(* Network 9 *)
+LD    %M3.7
+R    %Q1.6
+(* Network 10 *)
+LD    TRUE
+MOVE    C19, %VW312
+MUL    200, %VW312
+(* Network 11 *)
+(*MilkMeter*)
+LD    %I2.5
+TON   T73, 10
+__CR_EQ_1
+MOVE    T73, %VW250
+__CR_RESTORE
+S    %Q1.5
+(* Network 12 *)
+LD    %Q1.5
+TON   T74, 10
+__CR_EQ_1
+MOVE    T74, %VW252
+__CR_RESTORE
+ST   %M3.6
+(* Network 13 *)
+LD    %M3.6
+AND    %I2.1
+CTU   C18, %M0.2, 10000
+__CR_EQ_1
+MOVE    C18, %VW254
+__CR_RESTORE
+ST   %BR0.0
+(* Network 14 *)
+LD    %M3.6
+R    %Q1.5
+(* Network 15 *)
+LD    TRUE
+MOVE    C18, %VW310
+MUL    200, %VW310
+(* Network 16 *)
+(*MilkMeter*)
+LD    %I2.4
+TON   T71, 10
+__CR_EQ_1
+MOVE    T71, %VW194
+__CR_RESTORE
+S    %Q1.4
+(* Network 17 *)
+LD    %Q1.4
+TON   T72, 10
+__CR_EQ_1
+MOVE    T72, %VW196
+__CR_RESTORE
+ST   %M3.5
+(* Network 18 *)
+LD    %M3.5
+AND    %I2.1
+CTU   C17, %M0.2, 10000
+__CR_EQ_1
+MOVE    C17, %VW198
+__CR_RESTORE
+ST   %BR0.0
+(* Network 19 *)
+LD    %M3.5
+R    %Q1.4
+(* Network 20 *)
+LD    TRUE
+MOVE    C17, %VW308
+MUL    200, %VW308
+(* Network 21 *)
+LD    TRUE
+MBUSR    %M53.7, 1, B#1, 3, 0, 12, %VW392, %MB56
+NE    %VW392, 0
+NE    %VB398, %VB502
+MOVE    %VB406, %VB500
+AND    B#2#00111111, %VB500
+MOVE    %VB398, %VB502
+MOVE    %VB400, %VB503
+MOVE    %VB402, %VB504
+MOVE    %VB404, %VB505
+MOVE    B#1, %VB900
+(* Network 22 *)
+(*MilkMeter*)
+LD    %I2.3
+TON   T69, 10
+__CR_EQ_1
+MOVE    T69, %VW188
+__CR_RESTORE
+S    %Q1.3
+(* Network 23 *)
+LD    %Q1.3
+TON   T70, 10
+__CR_EQ_1
+MOVE    T70, %VW190
+__CR_RESTORE
+ST   %M3.4
+(* Network 24 *)
+LD    %M3.4
+AND    %I2.1
+CTU   C16, %M0.2, 10000
+__CR_EQ_1
+MOVE    C16, %VW192
+__CR_RESTORE
+ST   %BR0.0
+(* Network 25 *)
+LD    %M3.4
+R    %Q1.3
+(* Network 26 *)
+LD    TRUE
+MOVE    C16, %VW306
+MUL    200, %VW306
+(* Network 27 *)
+(*MilkMeter*)
+LD    %I2.2
+TON   T67, 10
+__CR_EQ_1
+MOVE    T67, %VW182
+__CR_RESTORE
+S    %Q1.2
+(* Network 28 *)
+LD    %Q1.2
+TON   T68, 10
+__CR_EQ_1
+MOVE    T68, %VW184
+__CR_RESTORE
+ST   %M3.3
+(* Network 29 *)
+LD    %M3.3
+AND    %I2.1
+CTU   C15, %M0.1, 10000
+__CR_EQ_1
+MOVE    C15, %VW186
+__CR_RESTORE
+ST   %BR0.0
+(* Network 30 *)
+LD    %M3.3
+R    %Q1.2
+(* Network 31 *)
+LD    TRUE
+MOVE    C15, %VW304
+MUL    200, %VW304
+(* Network 32 *)
+(*MilkMeter*)
+LD    %I1.7
+TON   T65, 10
+__CR_EQ_1
+MOVE    T65, %VW176
+__CR_RESTORE
+S    %Q1.1
+(* Network 33 *)
+LD    %Q1.1
+TON   T66, 10
+__CR_EQ_1
+MOVE    T66, %VW178
+__CR_RESTORE
+ST   %M3.2
+(* Network 34 *)
+LD    %M3.2
+AND    %I2.1
+CTU   C14, %M0.1, 10000
+__CR_EQ_1
+MOVE    C14, %VW180
+__CR_RESTORE
+ST   %BR0.0
+(* Network 35 *)
+LD    %M3.2
+R    %Q1.1
+(* Network 36 *)
+LD    TRUE
+MOVE    C14, %VW302
+MUL    200, %VW302
+(* Network 37 *)
+(*MilkMeter*)
+LD    %I1.5
+TON   T63, 10
+__CR_EQ_1
+MOVE    T63, %VW170
+__CR_RESTORE
+S    %Q1.0
+(* Network 38 *)
+LD    %Q1.0
+TON   T64, 10
+__CR_EQ_1
+MOVE    T64, %VW172
+__CR_RESTORE
+ST   %M1.7
+(* Network 39 *)
+LD    %M1.7
+AND    %I2.1
+CTU   C13, %M0.1, 10000
+__CR_EQ_1
+MOVE    C13, %VW174
+__CR_RESTORE
+ST   %BR0.0
+(* Network 40 *)
+LD    %M1.7
+R    %Q1.0
+(* Network 41 *)
+LD    TRUE
+MOVE    C13, %VW300
+MUL    200, %VW300
+(* Network 42 *)
+(*MilkMeter*)
+LD    %I1.6
+TON   T59, 10
+__CR_EQ_1
+MOVE    T59, %VW168
+__CR_RESTORE
+S    %Q0.7
+(* Network 43 *)
+LD    %Q0.7
+TON   T60, 10
+__CR_EQ_1
+MOVE    T60, %VW166
+__CR_RESTORE
+ST   %M1.6
+(* Network 44 *)
+LD    %M1.6
+AND    %I2.0
+CTU   C9, %M0.1, 10000
+__CR_EQ_1
+MOVE    C9, %VW164
+__CR_RESTORE
+ST   %BR0.0
+(* Network 45 *)
+LD    %M1.6
+R    %Q0.7
+(* Network 46 *)
+LD    TRUE
+MOVE    C9, %VW14
+MUL    200, %VW14
+(* Network 47 *)
+(*MilkMeter*)
+LD    %I1.4
+TON   T56, 10
+__CR_EQ_1
+MOVE    T56, %VW160
+__CR_RESTORE
+S    %Q0.6
+(* Network 48 *)
+LD    %Q0.6
+TON   T57, 10
+__CR_EQ_1
+MOVE    T57, %VW158
+__CR_RESTORE
+ST   %M1.4
+(* Network 49 *)
+LD    %M1.4
+AND    %I2.0
+CTU   C8, %M0.1, 10000
+__CR_EQ_1
+MOVE    C8, %VW156
+__CR_RESTORE
+ST   %BR0.0
+(* Network 50 *)
+LD    %M1.4
+R    %Q0.6
+(* Network 51 *)
+LD    TRUE
+MOVE    C8, %VW12
+MUL    200, %VW12
+(* Network 52 *)
+(*MilkMeter*)
+LD    %I1.3
+ANDN    %I1.2
+TON   T52, 1800
+__CR_EQ_1
+MOVE    T52, %VW154
+__CR_RESTORE
+S    %Q0.5
+(* Network 53 *)
+LD    %I1.2
+TON   T53, 10
+__CR_EQ_1
+MOVE    T53, %VW152
+__CR_RESTORE
+S    %Q0.5
+(* Network 54 *)
+LD    %Q0.5
+TON   T54, 10
+__CR_EQ_1
+MOVE    T54, %VW150
+__CR_RESTORE
+ST   %M1.2
+(* Network 55 *)
+LD    %M1.2
+AND    %I2.0
+CTU   C7, %M0.1, 10000
+__CR_EQ_1
+MOVE    C7, %VW90
+__CR_RESTORE
+ST   %BR0.0
+(* Network 56 *)
+LD    %M1.2
+R    %Q0.5
+(* Network 57 *)
+LD    TRUE
+MOVE    C7, %VW10
+MUL    200, %VW10
+(* Network 58 *)
+(*MilkMeter*)
+LD    %I1.1
+ANDN    %I1.0
+TON   T49, 1800
+__CR_EQ_1
+MOVE    T49, %VW88
+__CR_RESTORE
+S    %Q0.4
+(* Network 59 *)
+LD    %I1.0
+TON   T50, 10
+__CR_EQ_1
+MOVE    T50, %VW86
+__CR_RESTORE
+S    %Q0.4
+(* Network 60 *)
+LD    %Q0.4
+TON   T51, 10
+__CR_EQ_1
+MOVE    T51, %VW84
+__CR_RESTORE
+ST   %M1.0
+(* Network 61 *)
+LD    %M1.0
+AND    %I2.0
+CTU   C6, %M0.1, 10000
+__CR_EQ_1
+MOVE    C6, %VW82
+__CR_RESTORE
+ST   %BR0.0
+(* Network 62 *)
+LD    %M1.0
+R    %Q0.4
+(* Network 63 *)
+LD    TRUE
+MOVE    C6, %VW8
+MUL    200, %VW8
+(* Network 64 *)
+(*MilkMeter*)
+LD    %I0.7
+ANDN    %I0.6
+TON   T46, 1800
+__CR_EQ_1
+MOVE    T46, %VW80
+__CR_RESTORE
+S    %Q0.3
+(* Network 65 *)
+LD    %I0.6
+TON   T47, 10
+__CR_EQ_1
+MOVE    T47, %VW78
+__CR_RESTORE
+S    %Q0.3
+(* Network 66 *)
+LD    %Q0.3
+TON   T48, 10
+__CR_EQ_1
+MOVE    T48, %VW76
+__CR_RESTORE
+ST   %M0.6
+(* Network 67 *)
+LD    %M0.6
+AND    %I2.0
+CTU   C5, %M0.1, 10000
+__CR_EQ_1
+MOVE    C5, %VW74
+__CR_RESTORE
+ST   %BR0.0
+(* Network 68 *)
+LD    %M0.6
+R    %Q0.3
+(* Network 69 *)
+LD    TRUE
+MOVE    C5, %VW6
+MUL    200, %VW6
+(* Network 70 *)
+(*MilkMeter*)
+LD    %I0.5
+ANDN    %I0.4
+TON   T43, 1800
+__CR_EQ_1
+MOVE    T43, %VW72
+__CR_RESTORE
+S    %Q0.2
+(* Network 71 *)
+LD    %I0.4
+TON   T44, 10
+__CR_EQ_1
+MOVE    T44, %VW70
+__CR_RESTORE
+S    %Q0.2
+(* Network 72 *)
+LD    %Q0.2
+TON   T45, 10
+__CR_EQ_1
+MOVE    T45, %VW68
+__CR_RESTORE
+ST   %M0.4
+(* Network 73 *)
+LD    %M0.4
+AND    %I2.0
+CTU   C4, %M0.1, 10000
+__CR_EQ_1
+MOVE    C4, %VW66
+__CR_RESTORE
+ST   %BR0.0
+(* Network 74 *)
+LD    %M0.4
+R    %Q0.2
+(* Network 75 *)
+LD    TRUE
+MOVE    C4, %VW4
+MUL    200, %VW4
+(* Network 76 *)
+(*MilkMeter*)
+LD    %I0.3
+ANDN    %I0.2
+TON   T41, 1800
+__CR_EQ_1
+MOVE    T41, %VW64
+__CR_RESTORE
+S    %Q0.1
+(* Network 77 *)
+LD    %I0.2
+TON   T40, 10
+__CR_EQ_1
+MOVE    T40, %VW62
+__CR_RESTORE
+S    %Q0.1
+(* Network 78 *)
+LD    %Q0.1
+TON   T42, 10
+__CR_EQ_1
+MOVE    T42, %VW60
+__CR_RESTORE
+ST   %M0.2
+(* Network 79 *)
+LD    %M0.2
+AND    %I2.0
+CTU   C2, %M0.1, 10000
+__CR_EQ_1
+MOVE    C2, %VW58
+__CR_RESTORE
+ST   %BR0.0
+(* Network 80 *)
+LD    %M0.2
+R    %Q0.1
+(* Network 81 *)
+LD    TRUE
+MOVE    C2, %VW2
+MUL    200, %VW2
+(* Network 82 *)
+LD    %I0.1
+ANDN    %I0.0
+TON   T39, 1800
+__CR_EQ_1
+MOVE    T39, %VW54
+__CR_RESTORE
+S    %Q0.0
+(* Network 83 *)
+LD    %I0.0
+TON   T37, 10
+__CR_EQ_1
+MOVE    T37, %VW50
+__CR_RESTORE
+S    %Q0.0
+(* Network 84 *)
+LD    %Q0.0
+TON   T38, 10
+__CR_EQ_1
+MOVE    T38, %VW52
+__CR_RESTORE
+ST   %M0.0
+(* Network 85 *)
+LD    %M0.0
+AND    %I2.0
+CTU   C1, %M0.1, 10000
+__CR_EQ_1
+MOVE    C1, %VW56
+__CR_RESTORE
+ST   %BR0.0
+(* Network 86 *)
+LD    %M0.0
+R    %Q0.0
+(* Network 87 *)
+LD    TRUE
+MOVE    C1, %VW0
+MUL    200, %VW0
+(* Network 88 *)
+(*RFID Reading*)
+LD    TRUE
+EQ    C0, 7
+NE    %VD920, %VD40
+MOVE    %VD920, %VD44
+NE    %VD44, DI#0
+MOVE    1, %VW600
+(* Network 89 *)
+LD    TRUE
+EQ    C0, 6
+NE    %VD920, %VD36
+MOVE    %VD920, %VD40
+NE    %VD40, DI#0
+MOVE    1, %VW600
+(* Network 90 *)
+LD    TRUE
+EQ    C0, 5
+NE    %VD920, %VD32
+MOVE    %VD920, %VD36
+NE    %VD36, DI#0
+MOVE    1, %VW600
+(* Network 91 *)
+LD    TRUE
+EQ    C0, 4
+NE    %VD920, %VD28
+MOVE    %VD920, %VD32
+NE    %VD32, DI#0
+MOVE    1, %VW600
+(* Network 92 *)
+LD    TRUE
+EQ    C0, 3
+NE    %VD920, %VD24
+MOVE    %VD920, %VD28
+NE    %VD28, DI#0
+MOVE    1, %VW600
+(* Network 93 *)
+LD    TRUE
+EQ    C0, 2
+NE    %VD920, %VD20
+MOVE    %VD920, %VD24
+NE    %VD24, DI#0
+MOVE    1, %VW600
+(* Network 94 *)
+LD    TRUE
+EQ    C0, 1
+NE    %VD920, %VD16
+MOVE    %VD920, %VD20
+NE    %VD20, DI#0
+MOVE    1, %VW600
+(* Network 95 *)
+LD    TRUE
+EQ    C0, 0
+NE    %VD920, %VD44
+MOVE    %VD920, %VD16
+NE    %VD16, DI#0
+MOVE    1, %VW600
+(* Network 96 *)
+LD    TRUE
+MBUSR    %SM0.3, 1, B#2, 3, 0, 12, %VW92, %MB53
+NE    %VW92, 0
+NE    %VB98, %VB202
+MOVE    %VB106, %VB200
+AND    B#2#00111111, %VB200
+MOVE    %VB98, %VB202
+MOVE    %VB100, %VB203
+MOVE    %VB102, %VB204
+MOVE    %VB104, %VB205
+MOVE    B#1, %VB800
+(* Network 97 *)
+LD    %SM0.4
+EQ    %VB800, B#1
+MOVE    %VB200, %VB700
+AND    B#2#00100000, %VB700
+SHR  %VB700, B#5
+EQ    %VB700, B#1
+ADD    DI#438953472, %VD202
+MOVE    B#2, %VB800
+(* Network 98 *)
+LD    %SM0.4
+EQ    %VB800, B#1
+MOVE    %VB200, %VB700
+AND    B#2#00100000, %VB700
+SHR  %VB700, B#5
+NE    %VB700, B#1
+MOVE    B#2, %VB800
+(* Network 99 *)
+LD    %SM0.4
+EQ    %VB800, B#2
+MOVE    %VB200, %VB700
+AND    B#2#00010000, %VB700
+SHR  %VB700, B#4
+EQ    %VB700, B#1
+ADD    DI#719476736, %VD202
+MOVE    B#3, %VB800
+(* Network 100 *)
+LD    %SM0.4
+EQ    %VB800, B#2
+MOVE    %VB200, %VB700
+AND    B#2#00010000, %VB700
+SHR  %VB700, B#4
+NE    %VB700, B#1
+MOVE    B#3, %VB800
+(* Network 101 *)
+LD    %SM0.4
+EQ    %VB800, B#3
+MOVE    %VB200, %VB700
+AND    B#2#00001000, %VB700
+SHR  %VB700, B#3
+EQ    %VB700, B#1
+ADD    DI#359738368, %VD202
+MOVE    B#4, %VB800
+(* Network 102 *)
+LD    %SM0.4
+EQ    %VB800, B#3
+MOVE    %VB200, %VB700
+AND    B#2#00001000, %VB700
+SHR  %VB700, B#3
+NE    %VB700, B#1
+MOVE    B#4, %VB800
+(* Network 103 *)
+LD    %SM0.4
+EQ    %VB800, B#4
+MOVE    %VB200, %VB700
+AND    B#2#00000100, %VB700
+SHR  %VB700, B#2
+EQ    %VB700, B#1
+ADD    DI#179869184, %VD202
+MOVE    B#5, %VB800
+(* Network 104 *)
+LD    %SM0.4
+EQ    %VB800, B#4
+MOVE    %VB200, %VB700
+AND    B#2#00000100, %VB700
+SHR  %VB700, B#2
+NE    %VB700, B#1
+MOVE    B#5, %VB800
+(* Network 105 *)
+LD    %SM0.4
+EQ    %VB800, B#5
+MOVE    %VB200, %VB700
+AND    B#2#00000010, %VB700
+SHR  %VB700, B#1
+EQ    %VB700, B#1
+ADD    DI#589934592, %VD202
+MOVE    B#6, %VB800
+(* Network 106 *)
+LD    %SM0.4
+EQ    %VB800, B#5
+MOVE    %VB200, %VB700
+AND    B#2#00000010, %VB700
+SHR  %VB700, B#1
+NE    %VB700, B#1
+MOVE    B#6, %VB800
+(* Network 107 *)
+LD    %SM0.4
+EQ    %VB800, B#6
+MOVE    %VB200, %VB700
+AND    B#2#00000001, %VB700
+EQ    %VB700, B#1
+ADD    DI#294967296, %VD202
+MOVE    B#7, %VB800
+END
+(* Network 108 *)
+LD    %SM0.4
+EQ    %VB800, B#6
+MOVE    %VB200, %VB700
+AND    B#2#00000001, %VB700
+NE    %VB700, B#1
+MOVE    B#7, %VB800
+(* Network 109 *)
+LD    %SM0.4
+EQ    %VB800, B#7
+MOVE    %VD202, %VD910
+AND    DW#2#10000000000000000000000000000000, %VD910
+SHR  %VD910, B#31
+EQ    %VB910, B#1
+AND    DW#2#01111111111111111111111111111111, %VD202
+ADD    DI#147483648, %VD202
+MOVE    B#8, %VB800
+(* Network 110 *)
+LD    %SM0.4
+EQ    %VB800, B#7
+MOVE    %VD202, %VD910
+AND    DW#2#10000000000000000000000000000000, %VD910
+SHR  %VD910, B#31
+NE    %VB910, B#1
+MOVE    B#8, %VB800
+(* Network 111 *)
+LD    %SM0.4
+EQ    %VB800, B#8
+MOVE    %VD202, %VD910
+AND    DW#2#01000000000000000000000000000000, %VD910
+SHR  %VD910, B#30
+EQ    %VB910, B#1
+AND    DW#2#10111111111111111111111111111111, %VD202
+ADD    DI#73741824, %VD202
+MOVE    B#9, %VB800
+(* Network 112 *)
+LD    %SM0.4
+EQ    %VB800, B#8
+MOVE    %VD202, %VD910
+AND    DW#2#01000000000000000000000000000000, %VD910
+SHR  %VD910, B#30
+NE    %VB910, B#1
+MOVE    B#9, %VB800
+(* Network 113 *)
+LD    %SM0.4
+EQ    %VB800, B#9
+MOVE    %VD202, %MD202
+MOVE    %VD202, %VD920
+MOD    DI#2#111011100110101100101000000000, %VD920
+MOVE    B#0, %VB800
+(* Network 114 *)
+LD    TRUE
+EQ    %VW600, 1
+CTU   C0, %M2.5, 8
+(* Network 115 *)
+LD    TRUE
+EQ    %VW600, 1
+CTU   C3, %M2.6, 9
+(* Network 116 *)
+LD    TRUE
+EQ    %VW600, 1
+MOVE    0, %VW600
+(* Network 117 *)
+LD    TRUE
+EQ    C3, 9
+ORN    %I2.0
+MBUSW    %SM0.4, 1, B#3, 16, 0, 24, %VW0, %MB30
+BLKMOVE  %VW950, %VW0, B#8
+BLKMOVE  %VW950, %VW20, B#14
+R_TRIG
+ST   %M2.6
+ST   %M0.1
+(* Network 118 *)
+LD    TRUE
+EQ    C0, 8
+R_TRIG
+ST   %M2.5
+(* Network 119 *)
+(*RFID Reading*)
+LD    TRUE
+EQ    C10, 7
+NE    %VD620, %VD340
+MOVE    %VD620, %VD344
+NE    %VD344, DI#0
+MOVE    1, %VW420
+(* Network 120 *)
+LD    TRUE
+EQ    C10, 6
+NE    %VD620, %VD336
+MOVE    %VD620, %VD340
+NE    %VD340, DI#0
+MOVE    1, %VW420
+(* Network 121 *)
+LD    TRUE
+EQ    C10, 5
+NE    %VD620, %VD332
+MOVE    %VD620, %VD336
+NE    %VD336, DI#0
+MOVE    1, %VW420
+(* Network 122 *)
+LD    TRUE
+EQ    C10, 4
+NE    %VD620, %VD328
+MOVE    %VD620, %VD332
+NE    %VD332, DI#0
+MOVE    1, %VW420
+(* Network 123 *)
+LD    TRUE
+EQ    C10, 3
+NE    %VD620, %VD324
+MOVE    %VD620, %VD328
+NE    %VD328, DI#0
+MOVE    1, %VW420
+(* Network 124 *)
+LD    TRUE
+EQ    C10, 2
+NE    %VD620, %VD320
+MOVE    %VD620, %VD324
+NE    %VD324, DI#0
+MOVE    1, %VW420
+(* Network 125 *)
+LD    TRUE
+EQ    C10, 1
+NE    %VD620, %VD316
+MOVE    %VD620, %VD320
+NE    %VD320, DI#0
+MOVE    1, %VW420
+(* Network 126 *)
+LD    TRUE
+EQ    C10, 0
+NE    %VD620, %VD344
+MOVE    %VD620, %VD316
+NE    %VD316, DI#0
+MOVE    1, %VW420
+(* Network 127 *)
+LD    TRUE
+MBUSR    %M53.7, 1, B#1, 3, 0, 12, %VW392, %MB56
+NE    %VW392, 0
+NE    %VB398, %VB502
+MOVE    %VB406, %VB500
+AND    B#2#00111111, %VB500
+MOVE    %VB398, %VB502
+MOVE    %VB400, %VB503
+MOVE    %VB402, %VB504
+MOVE    %VB404, %VB505
+MOVE    B#1, %VB900
+(* Network 128 *)
+LD    %SM0.4
+EQ    %VB900, B#1
+MOVE    %VB500, %VB1000
+AND    B#2#00100000, %VB1000
+SHR  %VB1000, B#5
+EQ    %VB1000, B#1
+ADD    DI#438953472, %VD502
+MOVE    B#2, %VB900
+(* Network 129 *)
+LD    %SM0.4
+EQ    %VB900, B#1
+MOVE    %VB500, %VB1000
+AND    B#2#00100000, %VB1000
+SHR  %VB1000, B#5
+NE    %VB1000, B#1
+MOVE    B#2, %VB900
+(* Network 130 *)
+LD    %SM0.4
+EQ    %VB900, B#2
+MOVE    %VB500, %VB1000
+AND    B#2#00010000, %VB1000
+SHR  %VB1000, B#4
+EQ    %VB1000, B#1
+ADD    DI#719476736, %VD502
+MOVE    B#3, %VB900
+(* Network 131 *)
+LD    %SM0.4
+EQ    %VB900, B#2
+MOVE    %VB500, %VB1000
+AND    B#2#00010000, %VB1000
+SHR  %VB1000, B#4
+NE    %VB1000, B#1
+MOVE    B#3, %VB900
+(* Network 132 *)
+LD    %SM0.4
+EQ    %VB900, B#3
+MOVE    %VB500, %VB1000
+AND    B#2#00001000, %VB1000
+SHR  %VB1000, B#3
+EQ    %VB1000, B#1
+ADD    DI#359738368, %VD502
+MOVE    B#4, %VB900
+(* Network 133 *)
+LD    %SM0.4
+EQ    %VB900, B#3
+MOVE    %VB500, %VB1000
+AND    B#2#00001000, %VB1000
+SHR  %VB1000, B#3
+NE    %VB1000, B#1
+MOVE    B#4, %VB900
+(* Network 134 *)
+LD    %SM0.4
+EQ    %VB900, B#4
+MOVE    %VB500, %VB1000
+AND    B#2#00000100, %VB1000
+SHR  %VB1000, B#2
+EQ    %VB1000, B#1
+ADD    DI#179869184, %VD502
+MOVE    B#5, %VB900
+(* Network 135 *)
+LD    %SM0.4
+EQ    %VB900, B#4
+MOVE    %VB500, %VB1000
+AND    B#2#00000100, %VB1000
+SHR  %VB1000, B#2
+NE    %VB1000, B#1
+MOVE    B#5, %VB900
+(* Network 136 *)
+LD    %SM0.4
+EQ    %VB900, B#5
+MOVE    %VB500, %VB1000
+AND    B#2#00000010, %VB1000
+SHR  %VB1000, B#1
+EQ    %VB1000, B#1
+ADD    DI#589934592, %VD502
+MOVE    B#6, %VB900
+(* Network 137 *)
+LD    %SM0.4
+EQ    %VB900, B#5
+MOVE    %VB500, %VB1000
+AND    B#2#00000010, %VB1000
+SHR  %VB1000, B#1
+NE    %VB1000, B#1
+MOVE    B#6, %VB900
+(* Network 138 *)
+LD    %SM0.4
+EQ    %VB900, B#6
+MOVE    %VB500, %VB1000
+AND    B#2#00000001, %VB1000
+EQ    %VB1000, B#1
+ADD    DI#294967296, %VD502
+MOVE    B#7, %VB900
+END
+(* Network 139 *)
+LD    %SM0.4
+EQ    %VB900, B#6
+MOVE    %VB500, %VB1000
+AND    B#2#00000001, %VB1000
+NE    %VB1000, B#1
+MOVE    B#7, %VB900
+(* Network 140 *)
+LD    %SM0.4
+EQ    %VB900, B#7
+MOVE    %VD502, %VD1010
+AND    DW#2#10000000000000000000000000000000, %VD1010
+SHR  %VD1010, B#31
+EQ    %VB1010, B#1
+AND    DW#2#01111111111111111111111111111111, %VD502
+ADD    DI#147483648, %VD502
+MOVE    B#8, %VB900
+(* Network 141 *)
+LD    %SM0.4
+EQ    %VB900, B#7
+MOVE    %VD502, %VD1010
+AND    DW#2#10000000000000000000000000000000, %VD1010
+SHR  %VD1010, B#31
+NE    %VB1010, B#1
+MOVE    B#8, %VB900
+(* Network 142 *)
+LD    %SM0.4
+EQ    %VB900, B#8
+MOVE    %VD502, %VD1010
+AND    DW#2#01000000000000000000000000000000, %VD1010
+SHR  %VD1010, B#30
+EQ    %VB1010, B#1
+AND    DW#2#10111111111111111111111111111111, %VD502
+ADD    DI#73741824, %VD502
+MOVE    B#9, %VB900
+(* Network 143 *)
+LD    %SM0.4
+EQ    %VB900, B#8
+MOVE    %VD502, %VD1010
+AND    DW#2#01000000000000000000000000000000, %VD1010
+SHR  %VD1010, B#30
+NE    %VB1010, B#1
+MOVE    B#9, %VB900
+(* Network 144 *)
+LD    %SM0.4
+EQ    %VB900, B#9
+MOVE    %VD502, %MD502
+MOVE    %VD502, %VD620
+MOD    DI#2#111011100110101100101000000000, %VD620
+MOVE    B#0, %VB900
+(* Network 145 *)
+LD    TRUE
+EQ    %VW420, 1
+CTU   C10, %M2.7, 8
+(* Network 146 *)
+LD    TRUE
+EQ    %VW420, 1
+CTU   C11, %M3.0, 9
+(* Network 147 *)
+LD    TRUE
+EQ    %VW420, 1
+MOVE    0, %VW420
+(* Network 148 *)
+LD    TRUE
+EQ    C11, 9
+ORN    %I2.1
+MBUSW    %SM0.4, 1, B#3, 16, 0, 24, %VW300, %MB31
+BLKMOVE  %VW950, %VW300, B#8
+BLKMOVE  %VW950, %VW320, B#14
+R_TRIG
+ST   %M3.0
+ST   %M0.2
+(* Network 149 *)
+LD    TRUE
+EQ    C10, 8
+R_TRIG
+ST   %M2.7
